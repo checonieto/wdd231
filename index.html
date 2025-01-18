@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-     <!-- Sergio Nieto Project -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Timbuktu Chamber of Commerce - Promoting local businesses and community growth">
-    <meta name="keywords" content="Timbuktu, Chamber of Commerce, local businesses, networking, events">
-    <meta name="author" content="Your Name">
-    <title>Timbuktu Chamber of Commerce</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Course Home Page for WDD231">
+    <meta name="author" content="Sergioi Nieto">
+    <title>Course Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
+        <h1>Welcome to WDD231</h1>
         <nav>
-            <ul>
+            <button id="menu-toggle">☰</button>
+            <ul id="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
+                <li><a href="cc/index.html" target="_blank">Chamber</a></li>
+                <li><a href="https://github.com/checonieto" target="_blank">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/sergionieto/" target="_blank">LinkedIn</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="overview">
-            <h1>Welcome to the Timbuktu Chamber of Commerce</h1>
-            <p>Your resource hub for local businesses, networking, and community growth in Timbuktu.</p>
+        <section>
+            <h2>About This Course</h2>
+            <p>This course introduces web development fundamentals, including HTML, CSS, and JavaScript.</p>
         </section>
 
-        <section id="project-specifications">
-            <h2>Project Specifications</h2>
-            <ul>
-                <li>Responsive design for mobile and desktop users</li>
-                <li>Modern, semantic HTML, CSS, and JavaScript</li>
-                <li>Accessible and user-friendly navigation</li>
-            </ul>
+        <section id="certificate">
+            <h2>Course Certificate</h2>
+            <div id="course-cards"></div>
+            <button id="show-all">All Courses</button>
+            <button id="show-wdd">WDD Courses</button>
+            <button id="show-cse">CSE Courses</button>
+            <p>Total Credits: <span id="total-credits">0</span></p>
+        </section>
+
+        <section>
+            <h2>Resources</h2>
+            <p>Explore resources and tools for your learning journey.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Timbuktu Chamber of Commerce | <a href="mailto:info@timbuktucommerce.com">Contact Us</a></p>
+        <p>&copy; <span id="year"></span> Sergio Nieto, Mexico</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
