@@ -1,0 +1,50 @@
+[
+    {
+      "name": "City Park",
+      "address": "123 Park Ave, City, State",
+      "description": "A beautiful park with walking trails and picnic areas.",
+      "image": "images/park.webp"
+    },
+    {
+      "name": "Local Museum",
+      "address": "456 Museum Rd, City, State",
+      "description": "Explore the history and culture of our city.",
+      "image": "images/museum.webp"
+    },
+    {
+      "name": "Downtown Diner",
+      "address": "789 Main St, City, State",
+      "description": "A classic diner with delicious comfort food.",
+      "image": "images/diner.webp"
+    },
+    {
+      "name": "Riverwalk",
+      "address": "101 Riverwalk Dr, City, State",
+      "description": "A scenic walkway along the river.",
+      "image": "images/riverwalk.webp"
+    },
+    {
+      "name": "Art Gallery",
+      "address": "202 Art St, City, State",
+      "description": "Featuring local and international artists.",
+      "image": "images/gallery.webp"
+    },
+    {
+      "name": "Sports Arena",
+      "address": "303 Stadium Blvd, City, State",
+      "description": "Home to local sports teams and events.",
+      "image": "images/arena.webp"
+    },
+    {
+      "name": "Botanical Garden",
+      "address": "404 Garden Ln, City, State",
+      "description": "A peaceful retreat with exotic plants.",
+      "image": "images/garden.webp"
+    },
+    {
+      "name": "Historic Theater",
+      "address": "505 Theater Rd, City, State",
+      "description": "Catch a play or concert at this historic venue.",
+      "image": "images/theater.webp"
+    }
+  ]

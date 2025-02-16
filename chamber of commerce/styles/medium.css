@@ -1,0 +1,11 @@
+/* Medium screens (641px - 1024px) */
+@media (min-width: 641px) {
+    .card-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 641px) {
+    .member-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
