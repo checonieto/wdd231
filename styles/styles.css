@@ -6,11 +6,12 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #f5f5f5;
     color: #333;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #264969;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -70,5 +71,10 @@ footer {
 
     #menu-toggle {
         display: block;
+        background: none;
+        color: white;
+        font-size: 2rem;
+        border: none;
+        cursor: pointer;
     }
 }
