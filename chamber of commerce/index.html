@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bison County Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bison County Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="hero">
+            <img src="images/spotlight.jpg" alt="Scenic view of Bison County" loading="lazy" class="responsive-img">
+            <h2>Welcome to the Heart of Bison County</h2>
+            <p>Connecting businesses and fostering economic growth.</p>
+        </section>
+        
+        <section id="weather">
+            <h3>Current Weather</h3>
+            <div id="weather-widget"></div>
+            <script src="scripts/weather.js" defer></script>
+        </section>
+        
+        <section id="business-spotlight">
+            <h3>Business Spotlight</h3>
+            <div class="business">
+                <img src="images/local-business.jpg" alt="Local Business" loading="lazy" class="responsive-img spotlight-img">
+                <p>Featured Business: <strong>Bison County Cafe</strong></p>
+                <p>Serving the best coffee and pastries in town.</p>
+            </div>
+            <div class="business">
+                <img src="images/hardware-store.jpg" alt="Hardware Store" loading="lazy" class="responsive-img spotlight-img">
+                <p>Featured Business: <strong>Bison County Hardware</strong></p>
+                <p>Your one-stop shop for all your hardware needs.</p>
+            </div>
+            <script src="scripts/spotlight.js" defer></script>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Bison County Chamber of Commerce</p>
+    </footer>
+</body>
+</html>
