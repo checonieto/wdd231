@@ -12,7 +12,8 @@
   <header>
     <h1>Big Horn Bison Chamber of Commerce Directory</h1>
     <nav>
-      <ul>
+      <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <ul id="nav-menu">
         <li><a href="../index.html">Home</a></li>
         <li><a href="index.html">Home Chamber</a></li>
         <li><a href="discover.html">Discover</a></li>
@@ -24,7 +25,11 @@
 
   <main>
     <h2>Member Directory</h2>
-    <div class="member-container">
+    <div class="view-toggle">
+      <button id="grid-view" aria-label="Switch to grid view">Grid View</button>
+      <button id="list-view" aria-label="Switch to list view">List View</button>
+    </div>
+    <div class="member-container" id="member-container">
       <!-- Members will be dynamically inserted here -->
     </div>
   </main>

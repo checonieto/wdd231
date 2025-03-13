@@ -1,30 +1,65 @@
 [
-    {
-      "name": "Joseph Smith",
-      "address": "123 Main St, CityVermont, NY",
-      "phone": "555-1234",
-      "email": "js@example.com",
-      "membershipLevel": "Gold"
-    },
-    {
-      "name": "Brigham Young",
-      "address": "456 Elm St, Salt Lake City, UT",
-      "phone": "555-5678",
-      "email": "by@example.com",
-      "membershipLevel": "Silver"
-    },
-    {
-      "name": "John Taylor",
-      "address": "789 Oak St, Ontario, CA",
-      "phone": "555-9101",
-      "email": "jt@example.com",
-      "membershipLevel": "Bronze"
-    },
-    {
-      "name": "Wilfor Woodruff",
-      "address": "101 Pine St, Saint George, UT",
-      "phone": "555-1122",
-      "email": "wiwu@example.com",
-      "membershipLevel": "Gold"
-    }
-  ]
+  {
+    "name": "Joseph Smith",
+    "address": "123 Main St, CityVermont, NY",
+    "phone": "555-1234",
+    "email": "js@example.com",
+    "website": "https://www.josephsmith.com",
+    "image": "member1.jpg",
+    "membershipLevel": "Gold"
+  },
+  {
+    "name": "Brigham Young",
+    "address": "456 Elm St, Salt Lake City, UT",
+    "phone": "555-5678",
+    "email": "by@example.com",
+    "website": "https://www.brighamyoung.com",
+    "image": "member2.jpg",
+    "membershipLevel": "Silver"
+  },
+  {
+    "name": "John Taylor",
+    "address": "789 Oak St, Ontario, CA",
+    "phone": "555-9101",
+    "email": "jt@example.com",
+    "website": "https://www.johntaylor.com",
+    "image": "member3.jpg",
+    "membershipLevel": "Bronze"
+  },
+  {
+    "name": "Wilford Woodruff",
+    "address": "101 Pine St, Saint George, UT",
+    "phone": "555-1122",
+    "email": "wiwu@example.com",
+    "website": "https://www.wilfordwoodruff.com",
+    "image": "member4.jpg",
+    "membershipLevel": "Gold"
+  },
+  {
+    "name": "Lorenzo Snow",
+    "address": "202 Maple St, Brigham City, UT",
+    "phone": "555-3344",
+    "email": "ls@example.com",
+    "website": "https://www.lorenzosnow.com",
+    "image": "member5.jpg",
+    "membershipLevel": "Silver"
+  },
+  {
+    "name": "Joseph F. Smith",
+    "address": "303 Cedar St, Salt Lake City, UT",
+    "phone": "555-5566",
+    "email": "jfs@example.com",
+    "website": "https://www.josephfsmith.com",
+    "image": "member6.jpg",
+    "membershipLevel": "Gold"
+  },
+  {
+    "name": "Heber J. Grant",
+    "address": "404 Birch St, Salt Lake City, UT",
+    "phone": "555-7788",
+    "email": "hjg@example.com",
+    "website": "https://www.heberjgrant.com",
+    "image": "member7.jpg",
+    "membershipLevel": "Bronze"
+  }
+]
