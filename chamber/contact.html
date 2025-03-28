@@ -23,45 +23,130 @@
   </header>
 
   <main>
-    <!-- Catchy Phrase -->
-    <section class="catchy-phrase">
-      <h2>Join Us Today!</h2>
-      <p>Be part of a thriving community that supports local businesses and fosters growth. Together, we can make a difference!</p>
+    <section class="hero">
+      <h2>Join Our Chamber</h2>
+      <p>Strengthen your business with networking, resources, and community support.</p>
     </section>
 
-    <!-- Contact Form -->
-    <section class="contact-form">
-      <h2>Contact Us</h2>
-      <form action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+    <!-- Membership Benefits (Cards with Modals) -->
+    <section class="membership-levels">
+      <h2>Membership Levels</h2>
+      <div class="cards-container">
+        <!-- Non-Profit Card -->
+        <div class="card" id="nonprofit-card">
+          <h3>Non-Profit</h3>
+          <p>$100/year</p>
+          <button class="benefits-btn" data-target="nonprofit-modal">View Benefits</button>
+        </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <!-- Bronze Card -->
+        <div class="card" id="bronze-card">
+          <h3>Bronze</h3>
+          <p>$200/year</p>
+          <button class="benefits-btn" data-target="bronze-modal">View Benefits</button>
+        </div>
 
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone">
+        <!-- Silver Card -->
+        <div class="card" id="silver-card">
+          <h3>Silver</h3>
+          <p>$400/year</p>
+          <button class="benefits-btn" data-target="silver-modal">View Benefits</button>
+        </div>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
+        <!-- Gold Card -->
+        <div class="card" id="gold-card">
+          <h3>Gold</h3>
+          <p>$1000/year</p>
+          <button class="benefits-btn" data-target="gold-modal">View Benefits</button>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Information -->
-    <section class="contact-info">
-      <h2>Our Information</h2>
-      <p><strong>Address:</strong> 123 Commerce St, City, State, ZIP</p>
-      <p><strong>Phone:</strong> (555) 123-4567</p>
-      <p><strong>Email:</strong> info@chamberofcommerce.com</p>
-    </section>
+    <!-- Membership Modals -->
+    <dialog id="nonprofit-modal" class="modal">
+      <h3>Non-Profit Benefits</h3>
+      <ul>
+        <li>Listing in online directory</li>
+        <li>Access to member events</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal" class="modal">
+      <h3>Bronze Benefits</h3>
+      <ul>
+        <li>All Non-Profit benefits</li>
+        <li>Business training sessions</li>
+        <li>Social media shoutouts</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="silver-modal" class="modal">
+      <h3>Silver Benefits</h3>
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>Featured in newsletter</li>
+        <li>Discounts on sponsorships</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="gold-modal" class="modal">
+      <h3>Gold Benefits</h3>
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Premium directory placement</li>
+        <li>Free event sponsorships</li>
+        <li>VIP networking access</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <!-- Join Form -->
+    <form id="join-form" action="thankyou.html" method="get">
+      <h2>Application Form</h2>
+      <label for="first-name">First Name*</label>
+      <input type="text" id="first-name" name="first-name" required pattern="[A-Za-z\s\-]{2,}">
+
+      <label for="last-name">Last Name*</label>
+      <input type="text" id="last-name" name="last-name" required pattern="[A-Za-z\s\-]{2,}">
+
+      <label for="title">Title/Position</label>
+      <input type="text" id="title" name="title" pattern="[A-Za-z\s\-]{7,}">
+
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" required placeholder="yourname@example.com">
+
+      <label for="phone">Mobile Phone*</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="business">Business/Organization Name*</label>
+      <input type="text" id="business" name="business" required>
+
+      <label for="membership">Membership Level*</label>
+      <select id="membership" name="membership" required>
+        <option value="">Select a level</option>
+        <option value="nonprofit">Non-Profit ($100/year)</option>
+        <option value="bronze">Bronze ($200/year)</option>
+        <option value="silver">Silver ($400/year)</option>
+        <option value="gold">Gold ($1000/year)</option>
+      </select>
+
+      <label for="description">Business Description</label>
+      <textarea id="description" name="description"></textarea>
+
+      <input type="hidden" id="timestamp" name="timestamp">
+
+      <button type="submit">Submit Application</button>
+    </form>
   </main>
 
   <footer>
-    <p>&copy; <span id="current-year"></span> Chamber of Commerce</p>
+    <p>&copy; <span id="current-year"></span> Big Horn Bison Chamber of Commerce</p>
+    <p id="last-modified"></p>
   </footer>
 
-  <script src="scripts/contact.js"></script>
+  <script src="scripts/join.js"></script>
 </body>
 </html>
