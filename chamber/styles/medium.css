@@ -1,76 +1,184 @@
-/* Medium screens (641px - 1024px) */
-@media (min-width: 641px) {
-    .card-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (min-width: 641px) {
-    .member-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  /* Base styles */
-.member-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+/* Base styles */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --contrast-text: #ffffff;
 }
 
-.member-card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  width: calc(33.33% - 20px);
-  text-align: center;
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: var(--light-color);
 }
 
-.member-card img {
-  max-width: 100%;
-  height: auto;
+header {
+  background-color: var(--primary-color);
+  color: var(--contrast-text);
+  padding: 1rem;
 }
 
-.list-view .member-card {
+h1, h2, h3 {
+  color: var(--primary-color);
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Card styles with contrast fixes */
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.card h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #333;
+  line-height: 1.5;
+}
+
+.card button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: #c0392b;
+}
+
+/* Image hover effect */
+.card img {
   width: 100%;
-  display: flex;
-  align-items: center;
-  text-align: left;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.list-view .member-card img {
-  width: 100px;
-  margin-right: 20px;
+.card:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.view-toggle {
-  margin-bottom: 20px;
-}
-
-.view-toggle button {
-  padding: 10px;
-  margin-right: 10px;
+/* Hamburger menu styles */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
-/* Responsive navigation menu */
-#nav-menu {
+#nav-menu ul {
   display: flex;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-#nav-menu.active {
-  display: block;
+#nav-menu li {
+  margin-left: 1rem;
 }
 
-#menu-toggle {
-  display: none;
+#nav-menu a {
+  color: white;
+  padding: 0.5rem;
 }
 
+#nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Visitor message */
+.visitor-message {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid var(--secondary-color);
+  color: var(--dark-color);
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
-  #nav-menu {
-    display: none;
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-
+  
   #menu-toggle {
     display: block;
   }
+  
+  #nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  #nav-menu.active {
+    display: block;
+  }
+  
+  #nav-menu ul {
+    flex-direction: column;
+  }
+  
+  #nav-menu li {
+    margin: 0.5rem 0;
+  margin-left: 0;
+  }
+  
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 641px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
 }

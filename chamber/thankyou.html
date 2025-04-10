@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - Big Horn Bison Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+  <header>
+    <h1>Big Horn Bison Chamber of Commerce</h1>
+  </header>
+
+  <main>
+    <section class="thank-you">
+      <h2>Thank You for Joining!</h2>
+      <p>We've received your application with the following details:</p>
+      <div id="submitted-data"></div>
+      <p>We'll contact you shortly to complete your membership.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> Big Horn Bison Chamber of Commerce</p>
+  </footer>
+
+  <script>
+    // Display submitted data from URL params
+    const params = new URLSearchParams(window.location.search);
+    const submittedData = document.getElementById('submitted-data');
+    
+    submittedData.innerHTML = `
+      <p><strong>Name:</strong> ${params.get('first-name')} ${params.get('last-name')}</p>
+      <p><strong>Email:</strong> ${params.get('email')}</p>
+      <p><strong>Phone:</strong> ${params.get('phone')}</p>
+      <p><strong>Business:</strong> ${params.get('business')}</p>
+      <p><strong>Membership Level:</strong> ${params.get('membership')}</p>
+      <p><strong>Submission Date:</strong> ${new Date(params.get('timestamp')).toLocaleString()}</p>
+    `;
+
+    // Set current year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
