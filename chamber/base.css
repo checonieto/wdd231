@@ -62,3 +62,52 @@ body {
     margin: 1rem;
     text-align: center;
   }
+  /* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 2rem;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* Membership card animations */
+.membership-card {
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delay animations */
+.membership-card:nth-child(1) { animation-delay: 0.1s; }
+.membership-card:nth-child(2) { animation-delay: 0.3s; }
+.membership-card:nth-child(3) { animation-delay: 0.5s; }
+.membership-card:nth-child(4) { animation-delay: 0.7s; }

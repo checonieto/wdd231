@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - Big Horn Bison Chamber of Commerce</title>
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/medium.css">
-  <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/medium.css" />
+  <link rel="stylesheet" href="styles/large.css" />
 </head>
 <body>
   <header>
@@ -27,41 +27,31 @@
       <h2>Join Our Chamber</h2>
       <p>Strengthen your business with networking, resources, and community support.</p>
     </section>
-
-    <!-- Membership Benefits (Cards with Modals) -->
-    <section class="membership-levels">
+<section class="membership-levels">
       <h2>Membership Levels</h2>
-      <div class="cards-container">
-        <!-- Non-Profit Card -->
-        <div class="card" id="nonprofit-card">
+      <div class="membership-container">
+        <div class="membership-card">
           <h3>Non-Profit</h3>
-          <p>$100/year</p>
-          <button class="benefits-btn" data-target="nonprofit-modal">View Benefits</button>
+          <p>Free</p>
+          <button class="info-btn" data-modal="nonprofit-modal">View Benefits</button>
         </div>
-
-        <!-- Bronze Card -->
-        <div class="card" id="bronze-card">
+        <div class="membership-card">
           <h3>Bronze</h3>
-          <p>$200/year</p>
-          <button class="benefits-btn" data-target="bronze-modal">View Benefits</button>
+          <p>$50/month</p>
+          <button class="info-btn" data-modal="bronze-modal">View Benefits</button>
         </div>
-
-        <!-- Silver Card -->
-        <div class="card" id="silver-card">
+        <div class="membership-card">
           <h3>Silver</h3>
-          <p>$400/year</p>
-          <button class="benefits-btn" data-target="silver-modal">View Benefits</button>
+          <p>$100/month</p>
+          <button class="info-btn" data-modal="silver-modal">View Benefits</button>
         </div>
-
-        <!-- Gold Card -->
-        <div class="card" id="gold-card">
+        <div class="membership-card">
           <h3>Gold</h3>
-          <p>$1000/year</p>
-          <button class="benefits-btn" data-target="gold-modal">View Benefits</button>
+          <p>$200/month</p>
+          <button class="info-btn" data-modal="gold-modal">View Benefits</button>
         </div>
       </div>
     </section>
-
     <!-- Membership Modals -->
     <dialog id="nonprofit-modal" class="modal">
       <h3>Non-Profit Benefits</h3>
@@ -69,7 +59,7 @@
         <li>Listing in online directory</li>
         <li>Access to member events</li>
       </ul>
-      <button class="close-modal">Close</button>
+      <button class="close-modal" type="button">Close</button>
     </dialog>
 
     <dialog id="bronze-modal" class="modal">
@@ -79,7 +69,7 @@
         <li>Business training sessions</li>
         <li>Social media shoutouts</li>
       </ul>
-      <button class="close-modal">Close</button>
+      <button class="close-modal" type="button">Close</button>
     </dialog>
 
     <dialog id="silver-modal" class="modal">
@@ -89,7 +79,7 @@
         <li>Featured in newsletter</li>
         <li>Discounts on sponsorships</li>
       </ul>
-      <button class="close-modal">Close</button>
+      <button class="close-modal" type="button">Close</button>
     </dialog>
 
     <dialog id="gold-modal" class="modal">
@@ -100,29 +90,30 @@
         <li>Free event sponsorships</li>
         <li>VIP networking access</li>
       </ul>
-      <button class="close-modal">Close</button>
+      <button class="close-modal" type="button">Close</button>
     </dialog>
 
     <!-- Join Form -->
     <form id="join-form" action="thankyou.html" method="get">
       <h2>Application Form</h2>
+
       <label for="first-name">First Name*</label>
-      <input type="text" id="first-name" name="first-name" required pattern="[A-Za-z\s\-]{2,}">
+      <input type="text" id="first-name" name="first-name" required pattern="[A-Za-z\s\-]{2,}" />
 
       <label for="last-name">Last Name*</label>
-      <input type="text" id="last-name" name="last-name" required pattern="[A-Za-z\s\-]{2,}">
+      <input type="text" id="last-name" name="last-name" required pattern="[A-Za-z\s\-]{2,}" />
 
       <label for="title">Title/Position</label>
-      <input type="text" id="title" name="title" pattern="[A-Za-z\s\-]{7,}">
+      <input type="text" id="title" name="title" pattern="[A-Za-z\s\-]{7,}" />
 
       <label for="email">Email*</label>
-      <input type="email" id="email" name="email" required placeholder="yourname@example.com">
+      <input type="email" id="email" name="email" required placeholder="yourname@example.com" />
 
       <label for="phone">Mobile Phone*</label>
-      <input type="tel" id="phone" name="phone" required>
+      <input type="tel" id="phone" name="phone" required />
 
       <label for="business">Business/Organization Name*</label>
-      <input type="text" id="business" name="business" required>
+      <input type="text" id="business" name="business" required />
 
       <label for="membership">Membership Level*</label>
       <select id="membership" name="membership" required>
@@ -136,10 +127,23 @@
       <label for="description">Business Description</label>
       <textarea id="description" name="description"></textarea>
 
-      <input type="hidden" id="timestamp" name="timestamp">
+      <input type="hidden" id="timestamp" name="timestamp" />
 
       <button type="submit">Submit Application</button>
     </form>
+    <!-- Membership Modals -->
+<div class="modal" id="np-modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>NP Membership Benefits</h3>
+    <ul>
+      <li>Free business listing</li>
+      <li>Access to networking events</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Repeat for other 3 membership types -->
   </main>
 
   <footer>
@@ -147,6 +151,11 @@
     <p id="last-modified"></p>
   </footer>
 
+  <script>
+    // Update current year and last modified
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = `Last Modified: ${document.lastModified}`;
+  </script>
   <script src="scripts/join.js"></script>
 </body>
 </html>

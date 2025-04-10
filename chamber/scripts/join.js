@@ -6,9 +6,11 @@ document.getElementById('last-modified').textContent = `Last Modified: ${documen
 const menuToggle = document.getElementById('menu-toggle');
 const primaryNav = document.getElementById('primary-nav');
 
-menuToggle.addEventListener('click', () => {
-  primaryNav.classList.toggle('active');
-});
+if (menuToggle && primaryNav) {
+  menuToggle.addEventListener('click', () => {
+    primaryNav.classList.toggle('active');
+  });
+}
 
 // Modal functionality
 const benefitButtons = document.querySelectorAll('.benefits-btn');
@@ -18,24 +20,52 @@ const closeButtons = document.querySelectorAll('.close-modal');
 benefitButtons.forEach(button => {
   button.addEventListener('click', () => {
     const targetModal = document.getElementById(button.dataset.target);
-    targetModal.showModal();
+    if (targetModal) {
+      targetModal.showModal();
+    }
   });
 });
 
 closeButtons.forEach(button => {
   button.addEventListener('click', () => {
-    button.closest('dialog').close();
+    const dialog = button.closest('dialog');
+    if (dialog) dialog.close();
   });
 });
 
 // Set form timestamp
-document.getElementById('timestamp').value = new Date().toISOString();
+const timestampField = document.getElementById('timestamp');
+if (timestampField) {
+  timestampField.value = new Date().toISOString();
+}
 
 // Form validation feedback
 const form = document.getElementById('join-form');
-form.addEventListener('submit', (e) => {
-  if (!form.checkValidity()) {
-    e.preventDefault();
-    alert('Please fill out all required fields correctly.');
-  }
+if (form) {
+  form.addEventListener('submit', (e) => {
+    if (!form.checkValidity()) {
+      e.preventDefault();
+      alert('Please fill out all required fields correctly.');
+    }
+  });
+}
+// Modal functionality for opening the modal
+document.querySelectorAll('.info-btn').forEach(card => {
+  card.addEventListener('click', function() {
+    const modalId = this.dataset.modal;
+    const targetModal = document.getElementById(modalId);
+    if (targetModal) {
+      targetModal.showModal(); // Use showModal() to open the <dialog> element
+    }
+  });
+});
+
+// Modal functionality for closing the modal
+document.querySelectorAll('.close').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const dialog = this.closest('dialog'); // Directly target the <dialog> element
+    if (dialog) {
+      dialog.close(); // Use close() to close the <dialog> element
+    }
+  });
 });
