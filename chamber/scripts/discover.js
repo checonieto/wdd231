@@ -13,7 +13,6 @@ async function loadCardData() {
     }
     const data = await response.json();
     populateCards(data);
-    optimizeImages();
   } catch (error) {
     console.error('Error loading card data:', error);
     document.querySelector('.card-container').innerHTML = 
@@ -39,23 +38,6 @@ function populateCards(data) {
       <button aria-label="Learn more about ${item.name}">Learn More</button>
     `;
     cardContainer.appendChild(card);
-  });
-}
-
-// Optimize images for performance
-function optimizeImages() {
-  document.querySelectorAll('.card img').forEach(img => {
-    // Add srcset if not present
-    if (!img.hasAttribute('srcset')) {
-      const src = img.getAttribute('src');
-      const baseName = src.substring(0, src.lastIndexOf('.'));
-      const extension = src.substring(src.lastIndexOf('.'));
-      img.setAttribute('srcset', 
-        `${baseName}-small${extension} 480w,
-         ${baseName}-medium${extension} 768w,
-         ${src} 1024w`);
-      img.sizes = '(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw';
-    }
   });
 }
 

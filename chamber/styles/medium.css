@@ -76,34 +76,46 @@ a {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Hamburger menu styles */
+/* Hamburger menu styles - ONLY THESE LINES WERE ADDED/MODIFIED */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 #menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+#nav-menu {
+    display: flex;
 }
 
 #nav-menu ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 #nav-menu li {
-  margin-left: 1rem;
+    margin-left: 1rem;
 }
 
 #nav-menu a {
-  color: white;
-  padding: 0.5rem;
+    color: white;
+    padding: 0.5rem;
 }
 
 #nav-menu a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Visitor message */
@@ -136,6 +148,7 @@ a {
     background-color: var(--primary-color);
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
   }
   
   #nav-menu.active {
@@ -148,7 +161,8 @@ a {
   
   #nav-menu li {
     margin: 0.5rem 0;
-  margin-left: 0;
+    margin-left: 0;
+    text-align: center;
   }
   
   .card-container {
@@ -181,4 +195,40 @@ footer {
 
 footer p {
   margin: 0.5rem 0;
+}
+/* Add these rules to your existing medium.css */
+
+/* Ensure image containers don't collapse */
+.card {
+  overflow: hidden; /* Ensures images respect border-radius */
+}
+
+/* Guarantee image responsiveness */
+.card img {
+  display: block; /* Removes inline spacing */
+  max-width: 100%;
+  height: auto;
+  width: 100%; /* Added to force responsiveness */
+}
+
+/* Fix hamburger menu functionality */
+#nav-menu {
+  transition: all 0.3s ease; /* Smooth animation */
+}
+
+@media (max-width: 768px) {
+  #nav-menu {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 !important;
+  }
+  
+  #nav-menu.active {
+      max-height: 500px;
+      padding: 1rem !important;
+  }
+  
+  #menu-toggle {
+      z-index: 1001; /* Above other elements */
+  }
 }

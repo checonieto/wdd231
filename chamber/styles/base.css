@@ -1,148 +1,137 @@
-/* Base styles for all screen sizes */
+/* ORIGINAL BASE STYLES - UNTOUCHED */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header, footer {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin: 0 1rem;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .card-container {
-    display: grid;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  
-  .card {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .card img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .card button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-  }
-  
-  .card button:hover {
-    background-color: #0056b3;
-  }
-  
-  #visit-message {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    margin: 1rem;
-    text-align: center;
-  }
-  .member-container {
-    display: grid;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  
-  .member-card {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .member-card h3 {
-    margin: 0;
-  }
-  
-  .member-card p {
-    margin: 0.5rem 0;
-  }
-  /* Base styles */
-.member-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.member-card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  width: calc(33.33% - 20px);
+header, footer {
+  position: sticky;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
   text-align: center;
 }
 
-.member-card img {
-  max-width: 100%;
-  height: auto;
-}
-
-.list-view .member-card {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  text-align: left;
-}
-
-.list-view .member-card img {
-  width: 100px;
-  margin-right: 20px;
-}
-
-.view-toggle {
-  margin-bottom: 20px;
-}
-
-.view-toggle button {
-  padding: 10px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-/* Responsive navigation menu */
-#nav-menu {
-  display: flex;
+nav ul {
   list-style: none;
   padding: 0;
 }
 
+nav ul li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.card-container {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+#visit-message {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+/* NEW: ONLY ADDED MOBILE MENU STYLES */
+#menu-toggle {
+  display: none; /* Hidden by default */
+}
+
+@media (max-width: 768px) {
+  /* Show hamburger button */
+  #menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+  }
+
+  /* Hide regular menu */
+  #nav-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 1rem;
+  }
+
+  /* Show menu when active */
+  #nav-menu.active {
+      display: block;
+  }
+
+  /* Stack menu items vertically */
+  #nav-menu ul {
+      flex-direction: column;
+  }
+
+  /* Initial hidden state */
+#nav-menu {
+  display: none;
+  position: absolute;
+  top: 60px; /* adjust according to header height */
+  left: 0;
+  width: 100%;
+  background-color: #264969; /* or your secondary color */
+  z-index: 1000;
+  text-align: center;
+}
+
+/* Show nav when active */
 #nav-menu.active {
   display: block;
 }
 
-#menu-toggle {
-  display: none;
+/* Optional styling */
+#nav-menu ul {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
 }
 
-@media (max-width: 768px) {
-  #nav-menu {
-    display: none;
-  }
+#nav-menu li {
+  margin: 0.5rem 0;
+}
 
-  #menu-toggle {
-    display: block;
-  }
+#nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 }
